@@ -1,0 +1,33 @@
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;application/octet-stream;
+Actions=_SEPARATOR_;01openWithGoogleDrive;02copyGoogleDriveLink;03openDriveFolder;04googleDriveOfflineAccess;_SEPARATOR_;99menuEnd;
+X-KDE-Priority=TopLevel
+
+[Desktop Action _SEPARATOR_]
+Name=-
+
+[Desktop Action 01openWithGoogleDrive]
+Name=Open with Google Drive
+Icon=icon_gdrive_open.png
+Exec=dga open %f
+
+[Desktop Action 02copyGoogleDriveLink]
+Name=Copy Google Drive link
+Icon=icon_gdrive_link.png
+Exec=dga copy-link --clipboard %f
+
+[Desktop Action 03openDriveFolder]
+Name=Open Google Drive folder
+Icon=icon_gdrive_folder.png
+Exec=dga open-folder %f
+
+[Desktop Action 04googleDriveOfflineAccess]
+Name=Google Drive offline access
+Icon=icon_gdrive_offline.png
+Exec=dga offline %f
+
+[Desktop Action 99menuEnd]
+Name=
+NoDisplay=true
+Exec=/usr/bin/true

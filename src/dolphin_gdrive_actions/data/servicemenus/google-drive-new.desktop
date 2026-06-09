@@ -1,0 +1,26 @@
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;application/octet-stream;
+Actions=01googleDoc;02googleSheets;03googleSlides;04googleDrawings;
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=New Google Drive files
+
+[Desktop Action 01googleDoc]
+Name=Google Doc
+Icon=text-editor
+Exec=dga new doc %f
+
+[Desktop Action 02googleSheets]
+Name=Google Sheets
+Icon=x-office-spreadsheet
+Exec=dga new sheet %f
+
+[Desktop Action 03googleSlides]
+Name=Google Slides
+Icon=x-office-presentation
+Exec=dga new slide %f
+
+[Desktop Action 04googleDrawings]
+Name=Google Drawings
+Icon=image-x-generic
+Exec=dga new drawing %f

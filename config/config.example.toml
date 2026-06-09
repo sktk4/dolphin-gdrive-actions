@@ -1,0 +1,2 @@
+# Canonical template: src/dolphin_gdrive_actions/data/config.example.toml
+# Run `dga setup` to generate ~/.config/dolphin-gdrive-actions/config.toml

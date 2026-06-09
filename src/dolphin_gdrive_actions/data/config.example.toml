@@ -1,0 +1,9 @@
+# Example config. Run `dga setup` to generate config.toml automatically.
+
+[[mounts]]
+local_root = "/home/you/Drives/your-remote"
+remote = "your-remote"
+
+# Optional for `dga new` when multiple Google accounts are signed into the browser.
+# Use the account index from drive.google.com/u/N/ (0 = default) or a signed-in email.
+# google_authuser = "1"

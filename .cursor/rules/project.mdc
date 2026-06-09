@@ -1,0 +1,26 @@
+---
+description: Core conventions for dolphin-gdrive-actions
+alwaysApply: true
+---
+
+# dolphin-gdrive-actions
+
+Read [AGENTS.md](../../AGENTS.md) before non-trivial changes. It has architecture, module map, and known limitations.
+
+## Non-negotiables
+
+- Keep Dolphin integration thin: service menus call `dga` subcommands; logic lives in the Python backend.
+- Do not hardcode usernames or mount paths; use config and `dga setup`.
+- Canonical templates live in `src/dolphin_gdrive_actions/data/` (not top-level `config/` or `servicemenus/`).
+- Metadata lookup uses `remote:path`, not a local mount path — translation is in `paths.py`.
+- **Never use `rclone link`** in user-facing commands — it mutates Drive sharing permissions.
+- Prefer stdlib; avoid new dependencies unless clearly justified.
+- Preserve stable CLI exit codes documented in AGENTS.md.
+- Run `pytest` after code changes.
+
+## Adding features
+
+1. New CLI subcommand first.
+2. Template in `data/servicemenus/` if Dolphin needs it.
+3. `dga setup` installs templates automatically.
+4. Update AGENTS.md and README when behavior or contracts change.
