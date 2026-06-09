@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/sktk4/dolphin-gdrive-actions/blob/main/CONTRIBUTING.md
+    about: Development setup, what to include in bug reports, and PR scope.

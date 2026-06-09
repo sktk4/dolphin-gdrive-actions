@@ -1,0 +1,94 @@
+name: Bug report
+description: Something failed or behaved unexpectedly
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. This is an early prototype — the more environment detail, the better.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: Right-clicked a file in Dolphin → Open with Google Drive → got a notification saying...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: Command or menu action
+      placeholder: dga open /path/to/file or Dolphin menu item name
+    validations:
+      required: true
+
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of `dga status`
+      description: Paste the full output if you can.
+      render: shell
+
+  - type: dropdown
+    id: launch-context
+    attributes:
+      label: Launched from
+      options:
+        - Dolphin context menu
+        - Terminal
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS / distro
+      placeholder: Kubuntu 26.04
+    validations:
+      required: true
+
+  - type: input
+    id: plasma
+    attributes:
+      label: Plasma version
+      placeholder: Plasma 6.6.x
+    validations:
+      required: true
+
+  - type: dropdown
+    id: session
+    attributes:
+      label: Session
+      options:
+        - Wayland
+        - X11
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: rclone
+    attributes:
+      label: rclone setup (no secrets)
+      description: Remote type, mount path, shared drive or combine mount if relevant. Do not paste tokens or `rclone.conf` secrets.
+      placeholder: |
+        Mount: /home/you/Drives/personal
+        Remote: personal (Google Drive)
+        Combine mount: no
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Terminal output, screenshots, or steps to reproduce.

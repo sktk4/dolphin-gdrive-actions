@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest an improvement or new action
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas are welcome. This project stays CLI-first with thin Dolphin service menus.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      placeholder: I often need to ... from Dolphin when working on rclone-mounted Drive files.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would use regularly
+        - Blocking my workflow
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I understand mount-only menu visibility needs a native Dolphin plugin
+        - label: I understand this project avoids `rclone link` for security reasons
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context
+      description: Similar tools, screenshots, or workarounds you use today.

@@ -160,6 +160,12 @@ pip uninstall dolphin-gdrive-actions
 - **Add shortcut** is not implemented yet.
 - Menus are visible everywhere you right-click; only paths under configured mounts succeed.
 
+## Feedback and bugs
+
+Early prototype — feedback helps. Open a [GitHub issue](https://github.com/sktk4/dolphin-gdrive-actions/issues) (bug or feature template). Include `dga status` output, your Plasma version, and how you launched the action (Dolphin vs terminal).
+
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for development setup and PR expectations.
+
 ## For contributors and agents
 
 See **[AGENTS.md](AGENTS.md)** for architecture, module map, design decisions, known limitations, and handoff context. Read it before continuing development. Cursor loads `.cursor/rules/project.mdc` automatically in this repo.
