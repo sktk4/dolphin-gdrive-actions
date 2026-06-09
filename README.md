@@ -4,6 +4,10 @@ Google Drive-style right-click actions for KDE Dolphin on files that live inside
 
 KDE's native `kio-gdrive` integration can be unreliable for new setups because of Google API/OAuth issues. [rclone](https://rclone.org/) mounts Google Drive reliably as a normal filesystem, but it does not provide Drive context-menu actions in Dolphin. This project adds those actions starting with a service menu backed by a reusable CLI.
 
+![Dolphin context menu with Google Drive actions and the New Google Drive files submenu](docs/screenshots/dolphin-context-menu.png)
+
+> Right-click menu in KDE Dolphin after `dga setup` — submenu creates blank Google Workspace files in the target folder.
+
 ## Current status
 
 **v0.2 prototype**
